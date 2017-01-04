@@ -1,0 +1,44 @@
+/* English */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu-L'), url(../fonts/Ubuntu-L.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Ubuntu-R'), url(../fonts/Ubuntu-R.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Ubuntu-M'), url(../fonts/Ubuntu-M.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Ubuntu-B'), url(../fonts/Ubuntu-B.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Ubuntu-C'), url(../fonts/Ubuntu-C.ttf) format('truetype');
+}
+/* Arabic */
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/DroidKufi-Bold.ttf) format('truetype');
+}
