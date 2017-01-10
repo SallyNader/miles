@@ -49,9 +49,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                            
                             <th class="column-title">Mobile </th>
                            
                             
@@ -79,9 +77,7 @@
 @foreach($contacts  as  $c)
 @if(!($c->mobile==null))
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                           
                            
                             <td class=" ">{{$c->mobile}}</td>
                             
@@ -105,9 +101,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                         
                          
                             <th class="column-title">Email </th>
                            <th class="column-title">View Details</th>
@@ -134,9 +128,7 @@
 @if(!($c->email==null))
 
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                            
                             <td class=" ">{{$c->email}}</td>
                               <td class=" "> <a href="{{url('controlcontact/show/email/'.$c->email)}}" class="btn btn-primary">View Details</a></td>
                             <td class=" "><a href="{{url('controlcontact/edit/email/'.$c->email)}}" class="btn btn-warning"  href="" >Update</a></td>
@@ -162,9 +154,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                           
                           
                             <th class="column-title">Address</th>
                             <th class="column-title">View Details</th>
@@ -193,9 +183,7 @@
 @if(!($c->address==null))
 
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                            
                             <td class=" ">{{$c->address}}</td>
                               <td class=" "> <a href="{{url('controlcontact/show/address/'.$c->address)}}" class="btn btn-primary">View Details</a></td>
                             <td class=" "><a href="{{url('controlcontact/edit/address/'.$c->address)}}" class="btn btn-warning"  href="" >Update</a></td>
@@ -218,9 +206,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                           
                             
                             <th class="column-title">Website </th>
                              <th class="column-title">View Details</th>
@@ -249,9 +235,7 @@
 
 
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                           
                             <td class=" ">{{$c->website}}</td>
                               <td class=" "> <a href="{{url('controlcontact/show/website/'.$c->website)}}" class="btn btn-primary">View Details</a></td>
                             <td class=" "><a href="{{url('controlcontact/edit/website/'.$c->website)}}" class="btn btn-warning"  href="" >Update</a></td>

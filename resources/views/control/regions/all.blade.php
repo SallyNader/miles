@@ -49,9 +49,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                            
                            
                             <th class="column-title">Region Name </th>
                             <th class="column-title">In City </th>
@@ -79,9 +77,7 @@
 
 @foreach($regions  as  $r)
 <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                           
                             <td class=" ">{{$r->rName}}</td>
 
      <td class=" ">{{$r->rCity}}</td>                          

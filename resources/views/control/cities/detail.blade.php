@@ -60,7 +60,7 @@
 
                       </ul>
 
-                      <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit City</a>
+                      <a href="{{route('controlcity.edit',$city->cityId)}}" class="btn btn-success">Edit City</a>
                       <br />
 
                       <!-- start skills -->

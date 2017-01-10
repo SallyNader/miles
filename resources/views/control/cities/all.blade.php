@@ -49,9 +49,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                           
                             <th class="column-title">city Name </th>
                             <th class="column-title">Country Name </th>
                             <th class="column-title">Details </th>
@@ -77,9 +75,7 @@
 
 @foreach($cities as  $c)
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                            
                             <td class=" ">{{$c->cityName}}</td>
                             <td class=" ">{{$c->cityCountry}}</td>
                             <td class=" "> <a href="{{route('controlcity.show',$c->cityId)}}" class="btn btn-primary">View Details</a></td>

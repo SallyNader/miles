@@ -54,6 +54,7 @@ Route::get('choose-project/{city}/{region}/{country}/{status}/{category}','Proje
 Route::get('choose-property/{project}/{city}/{region}/{country}/{status}/{category}','PropertyChooseController@show');
 
 Route::resource('unitdetail','UnitChooseController');
+Route::get('search','SearchController@show');
 
 Route::resource('profile','ProfileController');
 Route::resource('uploadunit','UserUploadUnitController');

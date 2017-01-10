@@ -49,9 +49,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                           
                             <th class="column-title">Video Name </th>
                             <th class="column-title">Approved </th>
                             <th class="column-title">Details </th>
@@ -77,9 +75,7 @@
 
 @foreach($videos  as  $v)
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                            
                             <td class=" ">{{$v->vName}}</td>
                             <td class=" ">
                               @if($v->appearInHome==1)

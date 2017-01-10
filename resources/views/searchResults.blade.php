@@ -1,27 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@extends('master',['countries'=>$countries])
+@extends('master')
 
 @section('content')
  <style>
@@ -33,19 +10,19 @@
 
 <div class="head">
     <div class="headIn">
-        <h1>{{$country}} Properties</h1> 
+        <h1>Result Of Searches</h1> 
     </div>
 </div>
 <div class="splash2">
-    <h1>Find Your Best Property In {{$country}}</h1>
+    <h1>Find Your Best Property</h1>
 </div>
 <div class="porFeeds">
      
     
    
-    @if(count($properties)>0)
+    @if(count($units)>0)
 
-    @foreach($properties as $property)
+    @foreach($units as $property)
      <div class="proFeedsItem">
 
         <div class="proItem">
@@ -57,7 +34,7 @@
                 <span>{{$property->uRegion}}</span>
                 <a href="{{route('unitdetail.show',$property->uId)}}">Show Details</a>
             </div>
-        </div>
+            </div>
         </div>
 @endforeach
 
@@ -74,5 +51,9 @@
 
     <div class="clear"></div>
 </div>       
+</div>
+<center>
+
+</center>
 
 @stop

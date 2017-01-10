@@ -49,9 +49,7 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                            
                            
                             <th class="column-title">type Name </th>
                         
@@ -79,9 +77,7 @@
 @foreach($types  as  $t)
 
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                           
                      
 
      <td class=" ">{{$t->tStatus}}</td>                          

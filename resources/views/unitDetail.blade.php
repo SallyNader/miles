@@ -52,11 +52,11 @@
 <p><span>Build up Area:</span> {{$unit->uAreaSQM}}
 
 </p>
-<p><span>Land Area : </span> {{$unit->uAreaSQM}}  m2</p>
+<p><span>Land Area : </span> {{ $unit->uAreaSQM}}  m2</p>
 
 @else
 
-<p><span>Area : </span> $unit->uLandArea  m2</p>
+<p><span>Area : </span>{{ $unit->uLandArea}}  m2</p>
 
 @endif
 @endif

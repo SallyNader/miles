@@ -48,10 +48,7 @@
                     <div class="table-responsive">
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
-                          <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
+                         
                             <th class="column-title">Category Name </th>
                             
                             <th class="column-title">Details </th>
@@ -77,9 +74,7 @@
 
 @foreach($categories  as  $c)
                           <tr class="odd pointer">
-                            <td class="a-center ">
-                              <input type="checkbox" class="flat" name="table_records">
-                            </td>
+                            
                             <td class=" ">{{$c->catName}}</td>
                             
                             <td class=" "> <a href="{{route('controlcategory.show',$c->catId)}}" class="btn btn-primary">View Details</a></td>
