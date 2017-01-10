@@ -14,7 +14,7 @@
 Route::get('details',function(){
 
 
-	return view('control.units.all');
+	return view('user.uploadUnit');
 });
 
 Route::get('home', function () {
@@ -54,10 +54,25 @@ Route::get('choose-project/{city}/{region}/{country}/{status}/{category}','Proje
 Route::get('choose-property/{project}/{city}/{region}/{country}/{status}/{category}','PropertyChooseController@show');
 
 Route::resource('unitdetail','UnitChooseController');
+
+Route::resource('profile','ProfileController');
+Route::resource('uploadunit','UserUploadUnitController');
 Route::resource('choose-city','CityChooseController');
+//show contact with column
+
+
+Route::get('controlcontact/show/{row}/{contact}','ContactControlController@show');
+
+//edit contact with column
+
+
+Route::get('controlcontact/edit/{row}/{contact}','ContactControlController@edit');
 
 
 
+Route::put('controlcontact/update/{row}/{contact}','ContactControlController@update');
+
+Route::get('controlcontact/delete/{column}/{contact}','ContactControlController@destroy');
 //control
 
 Route::resource('controlcategory','CategoryControlController');
@@ -69,6 +84,9 @@ Route::resource('controlregion','RegionControlController');
 Route::resource('controltype','TypeControlController');
 Route::resource('controlunit','UnitControlController');
 Route::resource('controlvideo','VideoControlController');
+Route::resource('controlcontact','ContactControlController');
+
+
 //delete routes
 
 
@@ -87,5 +105,12 @@ Route::get('controlregion/delete/{id}','RegionControlController@destroy');
 
 
 Route::get('controltype/delete/{id}','TypeControlController@destroy');
+Route::get('controlunit/delete/{id}','UnitControlController@destroy');
+Route::get('controlvideo/delete/{id}','VideoControlController@destroy');
 
 
+
+
+Auth::routes();
+
+Route::get('index', 'HomeController@index');

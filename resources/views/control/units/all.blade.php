@@ -88,9 +88,9 @@
      </td>
      <td class=" ">{{$u->uCountry}}</td>  
      <td class=" ">{{$u->uFurnished}}</td>                          
-                            <td class=" "> <button type="button" class="btn btn-primary">View Details</button></td>
-                            <td class=" "><button type="button" class="btn btn-warning">Update</button></td>
-                            <td class=" "> <button type="button" class="btn btn-danger">Delete                        </button></td>
+                            <td class=" "> <a class="btn btn-primary" href="{{route('controlunit.show',$u->uId)}}">View Details</a></td>
+                            <td class=" "><a href="{{route('controlunit.edit',$u->uId)}}" class="btn btn-warning" >Update</a></td>
+                            <td class=" "> <a href="{{url('controlunit/delete/'.$u->uId)}}" class="btn btn-danger" >Delete                        </a></td>
                           
                             
                           </tr>

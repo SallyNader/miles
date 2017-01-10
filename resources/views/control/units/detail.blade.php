@@ -82,7 +82,7 @@
 
                       <h3 class="prod_title">Unit's Rooms </h3>
 
-                      <p>{{$unit->uNRoom}} </p>
+                      <p>{{$unit->uNRooms}} </p>
 
 
                       <h3 class="prod_title">Unit Area SQM </h3>
@@ -222,26 +222,10 @@
 
 
 
-                      <h3 class="prod_title">Map 1 </h3>
-
-                      <p>{{$unit->uMap1}} </p>
+                     
 
 
-
-
-
-
-
-
-
-
-                      <h3 class="prod_title">Map 2 </h3>
-
-                      <p>{{$unit->uMap2}} </p>
-
-
-
-                       <h3 class="prod_title">Unit uDate </h3>
+                       <h3 class="prod_title">Unit Date Of Creation </h3>
 
                       <p>{{$unit->uDate}} </p>
 
@@ -253,9 +237,7 @@
 
 
 
-                      <h3 class="prod_title">Unit delDate</h3>
-
-                      <p>{{$unit->uDelDate}} </p>
+                    
 
 
 
@@ -279,7 +261,15 @@
 
                        <h3 class="prod_title">Unit Approved </h3>
 
-                      <p>{{$unit->uApproved}} </p>
+                      <p>@if($unit->uApproved==1)
+                      Approved
+                      @elseif($unit->uApproved==0)
+                      Not Approved
+                      @endif
+
+
+
+                       </p>
 
 
 
@@ -289,22 +279,7 @@
 
 
 
-                      <h3 class="prod_title">Unit </h3>
-
-                      <p>{{$unit->}} </p>
-
-
-
-
-
-
-
-
-
-
-                      <h3 class="prod_title">Unit </h3>
-
-                      <p>{{$unit->}} </p>
+                      
                       <br />
 <!--
                       <div class="">

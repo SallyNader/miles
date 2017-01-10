@@ -52,24 +52,312 @@
                       <span class="section"></span>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Region Name <span class="required"></span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Unit Code <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="code" placeholder="unit code" value="{{old('code')}}" type="text">
+
+                           <p style="color:#169F85;">{{$errors->first('code')}}</p>
                         </div>
                       </div>
+                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Unit Type <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="type" placeholder="unit type" value="{{old('type')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('type')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Number of Rooms <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="rooms" placeholder="number of rooms" value="{{old('rooms')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('rooms')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Area SQM <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="sqm" placeholder="Area SQM" value="{{old('sqm')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('sqm')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Area Of Land <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="land" placeholder="area of land" value="{{old('land')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('land')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Furnished <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="furnished" placeholder="furnished" value="{{old('furnished')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('furnished')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+ <label for="heard" style="margin-left: 190px">Parking Exist</label>
+                          <div class="item form-group" style="margin-left: 280px" >
+                      
+                          <select  name="parking" id="heard" class="form-control" style="width: 400px"  >
+                            <option value="1">yes</option>
+                            <option value="0">no</option>
+                           
+                          </select>
+                      </div>
+
+
+
+
+
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Unit Price <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="price" placeholder="unit price" value="{{old('price')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('price')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Price Currency <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="currency" placeholder="currancy of price" value="{{old('currency')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('currency')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+                          <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Number Of Bedrooms <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="bedroom" placeholder="Number Of Bedrooms" value="{{old('bedroom')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('bedroom')}}</p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+<div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Number Of Bathrooms <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="bathroom" placeholder="Number Of Bathrooms" value="{{old('bathroom')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('bathroom')}}</p>
+                        </div>
+                      </div>
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Yearly Service Charge <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="yearcharge" placeholder="yesrly service charge" value="{{old('yearcharge')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('yearcharge')}}</p>
+
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Unit Description <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="description" placeholder="description" value="{{old('description')}}" type="text">
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+              <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">In Country <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="country" placeholder="country" value="{{old('country')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('country')}}</p>
+
+                        </div>
+                      </div>
+
+       <label for="heard" style="margin-left: 190px" >Buy Or Rent</label>
+<div class="item form-group" style="margin-left: 280px">
+                
+                          <select name="status" id="heard" class="form-control" style="width: 400px" >
+                            <option value="Buy">buy</option>
+                            <option value="Rent">rent</option>
+                           
+                          </select>
+                      </div>
+
+   <label for="heard" style="margin-left: 190px">Residential Or Commercial</label>
+<div name="category" class="item form-group" style="margin-left: 280px">
+                    
+                          <select name="category" id="heard" class="form-control" style="width: 400px" >
+                            <option value="commercial">commercial</option>
+                            <option value="residential">residential</option>
+                           
+                          </select>
+                      </div>
+
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">In City <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="city" placeholder="in city" value="{{old('city')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('city')}}</p>
+
                         </div>
                       </div>
                        <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Region Image<span class="required"></span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">In Region <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                         <input type="file" name="">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="region" placeholder="in region" value="{{old('region')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('region')}}</p>
+
+                        </div>
+                      </div>
+
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">By Project <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="project" placeholder="by project" value="{{old('project')}}" type="text">
+                           <p style="color:#169F85;">{{$errors->first('project')}}</p>
+
+                        </div>
+                      </div>
+
+
+<!--
+ <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Number Of Bedrooms <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="bedroom" placeholder="Number Of Bedrooms" value="{{old('bedroom')}}" type="text">
+                        </div>
+                      </div>
+
+
+
+
+                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Number Of Bedrooms <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="bedroom" placeholder="Number Of Bedrooms" value="{{old('bedroom')}}" type="text">
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Unit Image<span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                         <input type="file" name="file">
+                           <p style="color:#169F85;">{{$errors->first('file')}}</p>
+
                         </div>
                       </div>
                     

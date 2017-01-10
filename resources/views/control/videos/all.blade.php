@@ -52,8 +52,8 @@
                             <th>
                               <input type="checkbox" id="check-all" class="flat">
                             </th>
-                            <th class="column-title">Category Name </th>
-                            <th class="column-title">Created at </th>
+                            <th class="column-title">Video Name </th>
+                            <th class="column-title">Approved </th>
                             <th class="column-title">Details </th>
                             <th class="column-title">Update </th>
                             <th class="column-title">Delete</th>
@@ -73,19 +73,34 @@
                          
                           
                          
+@unless(empty($videos))
 
+@foreach($videos  as  $v)
                           <tr class="odd pointer">
                             <td class="a-center ">
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
-                            <td class=" ">121000039</td>
-                            <td class=" ">May 28, 2014 11:30:12 PM</td>
-                            <td class=" "> <button type="button" class="btn btn-primary">Primary</button></td>
-                            <td class=" "><button type="button" class="btn btn-warning">Warning</button></td>
-                            <td class=" "> <button type="button" class="btn btn-danger">Danger</button></td>
+                            <td class=" ">{{$v->vName}}</td>
+                            <td class=" ">
+                              @if($v->appearInHome==1)
+                              yes
+
+                              @elseif($v->appearInHome==0)
+                              no
+
+                              @endif
+
+
+                            </td>
+                            <td class=" "> <a href="{{route('controlvideo.show',$v->vId)}}"   class="btn btn-primary">View Details</a></td>
+                            <td class=" "><a  href="{{route('controlvideo.edit',$v->vId)}}" class="btn btn-warning">Update</a></td>
+                            <td class=" "> <a  href="{{url('controlvideo/delete/'.$v->vId)}}" class="btn btn-danger">Delete</a></td>
                           
                             
                           </tr>
+                          @endforeach
+                          @endunless
+
                         </tbody>
                       </table>
                     </div>

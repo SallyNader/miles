@@ -26,14 +26,7 @@
                         <div class="thumbnail" style="width:500px ;height:300px ">
                           <div class="image view view-first" style="width:120% ;height: 164%">
                             <img style="width: 83%;height: 60%; display: block;" src="{!!asset('type/'.$type->tPic)!!}" alt="image" />
-                            <div class="mask">
-                              <p>Your Text</p>
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
-                            </div>
+                         
                           </div>
                           
                         </div>

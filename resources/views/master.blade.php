@@ -3,8 +3,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title class="title">Milestone | About</title>
-        
+        <title class="title">Milestone </title>
+        <!--- video slider -->
+         <link href="{!!asset('6/thumbs.css')!!}" rel="stylesheet" type="text/css" />
+    <link href="{!!asset('5/ninja-slider.css')!!}" rel="stylesheet" type="text/css" />
+    <!--ninjaVideoPlugin.js is required only when the slider contains video or audio.-->
+    <script src="{!!asset('5/ninjaVideoPlugin.js')!!}"></script>
+    <script src="{!!asset('5/ninja-slider.js')!!}" type="text/javascript"></script>
+      <!--end video slider-->
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -13,7 +20,7 @@
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-        
+        <link href="{!!asset('vendors/bootstrap/dist/css/bootstrap.min.css')!!}" rel="stylesheet">
         <link href="{!!asset('resources/css/font-awesome.min.css')!!}" rel="stylesheet" type="text/css"/>
         <link href="{!!asset('resources/css/map.css')!!}" rel="stylesheet" type="text/css"/>
         <link href="{!!asset('resources/css/style.css')!!}" rel="stylesheet" type="text/css"/>
@@ -78,7 +85,7 @@
                         <li class="barNav"><i class="fa fa-fw fa-bars"></i></li>
                         <li class="openIt"><i class="fa fa-fw fa-bars"></i></li>  
                         
-                        <li><a  href="?page=home"> Home</a></li>
+                        <li><a  href="{{url('index')}}"> Home</a></li>
                         
                     <!--<li><a  href="?page=addproperty"><i class="fa fa-fw fa-plus-square"></i> Add your property</a></li>-->
                         <li class="li drop"><a ><i class="fa fa-search fa-fw"></i> Find Property <i class="fa fa-angle-down"></i></a>
@@ -94,7 +101,17 @@
 
                                 @endunless                               
                                                             </ul>                            
-                        </li>                            
+                        </li> 
+                        @if(!Auth::check())
+                        <li><a  href=""> Register</a></li>
+                        <li><a  href=""> Sign In</a></li> 
+                        @endif   
+
+                        @if(Auth::check())
+<li><a  href="{{url('profile')}}"> {{Auth::user()->name}}</a></li>
+ <li><a  href="{{route('uploadunit.create')}}"> Upload New Unit</a></li>
+                        <li><a  href=""> Sign Out</a></li>
+                        @endif                       
                         <li><a  href="{{url('contactus')}}"> Contact us</a></li>
                         <li><a  href="{{url('about')}}"> About us</a></li>
                     <li><a  href="?page=search"><i class="fa fa-fw fa-search"></i> Advanced Search </a></li>   
