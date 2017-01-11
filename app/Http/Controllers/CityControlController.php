@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\City;
+use App\Country;
 class CityControlController extends Controller
 {
     /**
@@ -25,7 +26,8 @@ class CityControlController extends Controller
      */
     public function create()
     {
-        return view('control.cities.create');
+$countries=Country::all();
+        return view('control.cities.create',compact('countries'));
     }
 
     /**
@@ -41,7 +43,7 @@ class CityControlController extends Controller
        $this->validate($request,[
 
 'name'=>'required',
-'country'=>'required',
+
 'file'=>'required'
 
 

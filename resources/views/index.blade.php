@@ -82,7 +82,7 @@
     });
 </script>    <div style="height: 100%" class="main">
         <div class="mainIn">
-            <img src="{!!asset('resources/images/logo+.png')!!}" alt="logo"/>
+            <img src="{!!asset('resources/images/logo.png')!!}" alt="logo"/>
             <h1>
                 <a href="{{url('home')}}">Home</a>
                 <a href="{{url('about')}}">About</a>

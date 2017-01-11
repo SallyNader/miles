@@ -111,7 +111,9 @@ Route::get('controlvideo/delete/{id}','VideoControlController@destroy');
 
 
 
-
+Route::get('/', function () {
+    return view('index');
+});
 Auth::routes();
 
-Route::get('index', 'HomeController@index');
+Route::get('tttt', 'HomeController@index');

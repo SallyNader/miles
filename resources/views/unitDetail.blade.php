@@ -24,7 +24,7 @@
             <h1 class="unit">{{$unit->uType}} | {{$unit->uPrice}} {{$unit->uPriceType}}</h1>
             <ul class="slides">
                 <li>
-                    <img src="{!!asset('resources/images/units/'.$unit->uFirstImage)!!}" />
+                    <img src="{!!asset('unit/'.$unit->uFirstImage)!!}" />
                 </li>                        
             </ul>
         </div> 

@@ -20,6 +20,93 @@
 
 
 
+<style type="text/css">
+     
+     /* USER PROFILE PAGE */
+ .card {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: rgba(214, 224, 226, 0.2);
+    -webkit-border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    border-top-right-radius:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+}
+.card.hovercard .card-background {
+    height: 130px;
+}
+.card-background img {
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
+    -o-filter: blur(25px);
+    -ms-filter: blur(25px);
+    filter: blur(25px);
+    margin-left: -100px;
+    margin-top: -200px;
+    min-width: 130%;
+}
+.card.hovercard .useravatar {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .useravatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.card.hovercard .card-info {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .card-info .card-title {
+    padding:0 5px;
+    font-size: 20px;
+    line-height: 1;
+    color: #262626;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.card.hovercard .card-info {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+.btn-pref .btn {
+    -webkit-border-radius:0 !important;
+}
+
+
+ </style>
 
 
 
@@ -137,11 +224,11 @@
         <header class="elmentS" id="topUp">
             <div class="topHeader">
                 <div class="logo">
-                    <a href="../index.php"><img src="{!!asset('resources/images/logo.png')!!}"/></a>
+                    <a href=""><img src="{!!asset('resources/images/logo.png')!!}"/></a>
                 </div>
                 <div class="lang">
-                    <a class="en" href="../en">English</a>
-                    <a class="ar" href="../ar">عربى</a>
+                    <a class="en" href="">English</a>
+                    <a class="ar" href="">عربى</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -151,7 +238,12 @@
                     <ul> 
                         <li class="barNav"><i class="fa fa-fw fa-bars"></i></li>
                         <li class="openIt"><i class="fa fa-fw fa-bars"></i></li>  
-                        <li> <form  action="{{url('search')}}" style="margin-top: 18px" ><input type="text" style="border-radius: 50px;color: black;width: 230px;height: 30px;margin-right: 15px" name="keyword" placeholder="    search..." ><button type="submit" class="btn btn-default" style="font-size:14px;width: 40px;height: 30px"> 
+
+
+                        <li> 
+
+
+                        <form  action="{{url('search')}}" style="margin-top: 18px; " ><input type="text" style="border-radius: 50px;color: black;width: 230px;height: 30px;margin-right: 15px" name="keyword" placeholder="    search..." ><button type="submit" class="btn btn-default" style="font-size:14px;width: 40px;height: 30px;;"> 
                           
                         <i  class="fa fa-search"></i></button> </form></li> 
                         <li><a  href="{{url('index')}}"> Home</a></li>
@@ -172,14 +264,22 @@
                                                             </ul>                            
                         </li> 
                         @if(!Auth::check())
-                        <li><a  href=""> Register</a></li>
-                        <li><a  href=""> Sign In</a></li> 
+                        <li><a  href="{{url('register')}}"> Register</a></li>
+                        <li><a  href="{{url('login')}}"> Sign In</a></li> 
                         @endif   
 
                         @if(Auth::check())
 <li><a  href="{{url('profile')}}"> {{Auth::user()->name}}</a></li>
  <li><a  href="{{route('uploadunit.create')}}"> Upload New Unit</a></li>
-                        <li><a  href=""> Sign Out</a></li>
+                        <li>
+                          <a>
+                            <form action="{{url('logout')}}" method="POST">
+                                {!! csrf_field() !!}
+                            
+                            <input type="submit" name="" value="SIGN OUT" style="border: none;background-color:#257da3;color: white;font-family: sans-serif;font-size: 15px;">
+                          </form>
+                          </a>
+                        </li>
                         @endif                       
                         <li><a  href="{{url('contactus')}}"> Contact us</a></li>
                         <li><a  href="{{url('about')}}"> About us</a></li>

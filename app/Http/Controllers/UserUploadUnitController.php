@@ -127,7 +127,7 @@ if($file->move($path,$newName)){
 
 
        }
-       return redirect('home');
+       return redirect('profile');
     }
 
     /**

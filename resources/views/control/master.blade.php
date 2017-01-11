@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentellela Alela! | </title>
+    <title>Milestone | Admin Panel </title>
 
     <!-- Bootstrap -->
     <link href="{!!asset('vendors/bootstrap/dist/css/bootstrap.min.css')!!}" rel="stylesheet">
@@ -186,7 +186,7 @@
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
-
+<!--
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -270,7 +270,7 @@
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul>-->
             </nav>
           </div>
         </div>
@@ -297,14 +297,14 @@
 
             @yield('content')
 
-             <!-- footer content -->
-        <footer>
+             <!-- 
+       <footer>
           <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>
-        <!-- /footer content -->
+        /footer content -->
       </div>
     </div>
 
@@ -335,34 +335,7 @@
     <!-- Custom Theme Scripts -->
     <script src="{!!asset('build/js/custom.min.js')!!}"></script>
 
-    <!-- PNotify -->
-    <script>
-      $(document).ready(function() {
-        new PNotify({
-          title: "PNotify",
-          type: "info",
-          text: "Welcome. Try hovering over me. You can click things behind me, because I'm non-blocking.",
-          nonblock: {
-              nonblock: true
-          },
-          addclass: 'dark',
-          styling: 'bootstrap3',
-          hide: false,
-          before_close: function(PNotify) {
-            PNotify.update({
-              title: PNotify.options.title + " - Enjoy your Stay",
-              before_close: null
-            });
-
-            PNotify.queueRemove();
-
-            return false;
-          }
-        });
-
-      });
-    </script>
-    <!-- /PNotify -->
+   
 
     <!-- Custom Notification -->
     <script>
