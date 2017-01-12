@@ -13,6 +13,11 @@ class UnitControlController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+{
+    $this->middleware('auth');
+}
     public function index()
     {
        
@@ -74,7 +79,6 @@ class UnitControlController extends Controller
        'bathroom'=>'required|numeric',
 
 
-       'yearcharge'=>'required',
 
 
        'country'=>'required',
@@ -251,7 +255,7 @@ return redirect('controlunit');
        'bathroom'=>'required|numeric',
 
 
-       'yearcharge'=>'required',
+   
 
 
        'country'=>'required',

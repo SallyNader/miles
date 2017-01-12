@@ -230,7 +230,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="yearcharge" placeholder="yesrly service charge" value="{{$unit->uYearlyServiceCharge}}" type="text">
-                           <p style="color:#169F85;">{{$errors->first('yearcharge')}}</p>
+                          
 
                         </div>
                       </div>
@@ -325,8 +325,22 @@
 
                         </div>
                       </div>
-
-
+<div class="well">
+  <div id="datetimepicker4" class="input-append">
+    <input data-format="yyyy-MM-dd" type="text"></input>
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker4').datetimepicker({
+      pickTime: false
+    });
+  });
+</script>
 <!--
  <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Number Of Bedrooms <span class="required"></span>

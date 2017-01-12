@@ -12,6 +12,12 @@ class CityControlController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    public function __construct()
+{
+    $this->middleware('auth');
+}
     public function index()
     {
 
@@ -103,7 +109,8 @@ return redirect('controlcity');
     public function edit($id)
     {
         $city=City::find($id);
-       return view('control.cities.edit',compact('city'));
+        $countries=Country::all();
+       return view('control.cities.edit',compact('city','countries'));
     }
 
     /**
@@ -120,7 +127,7 @@ return redirect('controlcity');
        $this->validate($request,[
 
 'name'=>'required',
-'country'=>'required'
+
 
 
         ]);

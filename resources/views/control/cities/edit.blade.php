@@ -82,12 +82,25 @@
                         </div>
                       </div>
                        <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Country Name <span class="required"></span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="country" placeholder="country name" value="{{$city->cityCountry}}" type="text">
-                          <p style="color:#169F85;">{{$errors->first('country')}}</p>
-                        </div>
+                        
+                        <label for="heard" style="margin-left: 190px">Country Name</label>
+                          <div class="item form-group" style="margin-left: 280px" >
+                      
+                          <select  name="country" id="heard" class="form-control" style="width: 400px"  >
+
+
+@unless(empty($countries))
+
+@foreach($countries  as  $c)
+
+                            <option value="{{$c->cName}}">{{$c->cName}}</option>
+                            @endforeach
+                          @endunless
+
+                            
+                           
+                          </select>
+                      </div>
                       </div>
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> City Image<span class="required"></span>

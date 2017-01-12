@@ -78,6 +78,18 @@
                       <p>{{$unit->uType}} </p>
 
 
+                       <h3 class="prod_title">Category</h3>
+
+                      <p>{{$unit->uCategory}} </p>
+
+
+                       <h3 class="prod_title">Status</h3>
+
+                      <p>{{$unit->uTypeStatus}} </p>
+
+
+                     
+
 
 
                       <h3 class="prod_title">Unit's Rooms </h3>

@@ -1,30 +1,6 @@
-@extends('master')
+@extends('layouts.app')
 
 @section('content')
-
-<style>
-.head{
-        background: url({!!asset('resources/images/page_header/Bali-Villa-164.jpg')!!}) no-repeat;
-        background-size: cover;
-    }
-</style>
-
-<div class="head" style="padding-bottom:  0px">
-    <div class="headIn">
-       
-    </div>
-</div>
-<div class="splash" style="padding-top: 0px">
-    <h1>Register In Milestone</h1>
-</div>
-
-<div class="about3">
-    <h1>  </h1>
-
-    <h3>Register in our website and upload units</h3>
-
-    <p></p>
-</div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -97,11 +73,4 @@
         </div>
     </div>
 </div>
-<br/>
-<br/>
-
-<br/>
-<br/>
-<br/>
-<br/>
 @endsection

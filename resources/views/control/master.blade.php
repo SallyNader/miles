@@ -124,6 +124,12 @@
                       
                     </ul>
                   </li>
+                      <li><a><i class="fa fa-table"></i>Users and Admins <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{route('controluser.index')}}">All Users and Admins</a></li>
+                      
+                    </ul>
+                  </li>
                 </ul>
               </div>
               <!--

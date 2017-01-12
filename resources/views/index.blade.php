@@ -3,6 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Milestone</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{!!asset('5/ninja-slider.css')!!}" rel="stylesheet" type="text/css" />
+
+
+
+
+<!--video api-->
+
+
+
+
+<!--video api-->
+
+
+        <!--ninjaVideoPlugin.js is required only when the slider contains video or audio.-->
+    <script src="{!!asset('5/ninjaVideoPlugin.js')!!}"></script>
+    <script src="{!!asset('5/ninja-slider.js')!!}" type="text/javascript"></script>
+    <script type="text/javascript">
+        //don't copy the script below into your page.
+        if (!document.domain) alert("The video will not work properly if opening the page by local path. Please test this page through HTTP on a web or localhost server");    
+    </script>
+    <style>
+        body {font: normal 0.9em Arial;margin:0;}
+        a {color:#1155CC;}
+        ul li {padding: 10px 0;}
+        header {display:block;padding:60px 0 10px;background-color:#333; text-align:center;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #555;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+    </style>
 </head>
 <body>
     <!--<style>
@@ -88,6 +135,54 @@
                 <a href="{{url('about')}}">About</a>
                 <a href="{{url('contactus')}}">Contact</a>
             </h1>
+              <!--start-->
+    <div id='ninja-slider' style="margin-top: 350px;margin-bottom: 55px" >
+        <div class="slider-inner">
+            <ul>
+               <!-- <li><a class="ns-img" href="img/1.jpg"></a></li>
+                <li>
+                    <div class="video">
+                        <iframe src="https://player.vimeo.com/video/93292237" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="ns-img" href="img/2.jpg"></a>
+                    <div class="caption">Supports Youtube, Vimeo and HTML video/audio</div>
+                    <div class="video-playbutton-layer"></div>
+                </li>
+                <li>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Bp119VFEjHE?enablejsapi=1&start=216&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1" frameborder="0" allowfullscreen data-autoplay="false"></iframe>
+                    </div>
+                    <a class="ns-img" href="img/3.jpg"></a>
+                    <div class="caption">This video starts from 3:36</div>
+                    <div class="video-playbutton-layer"></div>
+                </li>-->
+               
+                @unless(empty($videos))
+
+@foreach($videos  as  $link)
+@if($link->appearInHome != '0') <li>
+                 
+                       <iframe width="800" height="400" src="{{$link->youtubeLink}}" frameborder="0" allowfullscreen></iframe>
+
+
+                    
+                </li>
+                @endif
+@endforeach
+                          @endunless
+               <!-- <li>
+                    <a class="ns-img" href="img/5.jpg"></a>
+                    <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px;">
+                        <audio controls data-autoplay="1">
+                            <source src="img/mcaudio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </li>-->
+            </ul>
+            <div class="fs-icon"></div>
+        </div>
+    </div>
+    <!--end-->
         </div>
     <!--<div>
             <div class="selectIndex">
@@ -101,7 +196,11 @@
                 </div>
             </div>
         </div>-->
+
+          
     </div>
+  
+
     <script>
         // Select Property Index Page
         $(".h1").on("click", function () {

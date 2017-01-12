@@ -16,7 +16,7 @@ class AddVideoIdColumnToUnitTable extends Migration
         Schema::table('units', function (Blueprint $table) {
           
 
-          $table->integer('videoId')->unsigned()->nullable();
+          // $table->integer('videoId')->unsigned()->nullable();
         });
     }
 

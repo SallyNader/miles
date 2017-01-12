@@ -46,6 +46,8 @@
     @if(count($properties)>0)
 
     @foreach($properties as $property)
+
+    @unless($property->uApproved == '0')
      <div class="proFeedsItem">
 
         <div class="proItem">
@@ -59,11 +61,12 @@
             </div>
         </div>
         </div>
+        @endunless
 @endforeach
 
 @else
 
-<div class="porFeeds">
+
 <p class="no-item">There are no units tell now.</p>
 
         @endif

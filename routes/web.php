@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('tort',function(){
+
+
+	return view('tort');
+});
+
 Route::get('details',function(){
 
 
@@ -24,7 +30,9 @@ Route::get('home', function () {
 
 
 Route::get('index', function () {
-    return view('index');
+
+	$videos=App\Video::all();
+    return view('index',compact('videos'));
 });
 
 
@@ -87,6 +95,7 @@ Route::resource('controlunit','UnitControlController');
 Route::resource('controlvideo','VideoControlController');
 Route::resource('controlcontact','ContactControlController');
 
+Route::resource('controluser','UserControlController');
 
 //delete routes
 
@@ -112,8 +121,13 @@ Route::get('controlvideo/delete/{id}','VideoControlController@destroy');
 
 
 Route::get('/', function () {
-    return view('index');
+	$videos=App\Video::all();
+    return view('index',compact('videos'));
 });
 Auth::routes();
 
 Route::get('tttt', 'HomeController@index');
+
+
+
+Route::get('/home', 'HomeController@index');
